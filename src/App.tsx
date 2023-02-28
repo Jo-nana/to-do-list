@@ -1,7 +1,8 @@
 import { FC, ChangeEvent, useState } from 'react';
-import './App.css';
-import TodoTasks from './components/todotasks';
+import './App.scss';
+import TodoTasks from './components/todotask/todotasks';
 import { Task } from './Interfaces'
+import Form from './components/form/form'
 
 const App: FC = () => {
   // state variables
@@ -26,38 +27,25 @@ const App: FC = () => {
     setDeadLine(0);
   }
 
+
+ //function for the delete button
   const completeTask = (taskNameToDelete: string): void => {
     setTodoList(todoList.filter((task) => {
       return task.taskName !== taskNameToDelete; // keep all tasks that don't match the taskNameToDelete
     }))
   }
   return (
-    <div className="App">
-      <header className="header">
-        <div className="container">
-          <input
-            type="text"
-            placeholder='Task...'
-            name='task'
-            value={task}
-            onChange={handleChange}
-          />
-          <input
-            type="number"
-            placeholder='Deadline (in days)...'
-            name='deadline'
-            value={deadLine}
-            onChange={handleChange}
-          />
-        </div>
-        <button onClick={addTask}>Add Task</button>
-      </header>
-      <div className="list">
-        {todoList.map((task: Task, key: number)=> {
-          return <TodoTasks key={key} task={task} completeTask={completeTask}/>;
-        })}
-      </div>
+  <div className="App">
+    <header className="header">
+      <h1>Todo</h1>
+      <Form task={task} handleChange={handleChange} deadLine={deadLine} addTask={addTask}/>
+    </header>
+    <div className="list">
+      {todoList.map((task: Task, key: number)=> {
+        return <TodoTasks key={key} task={task} completeTask={completeTask}/>;
+      })}
     </div>
+  </div>
   );
 }
 

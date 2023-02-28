@@ -1,4 +1,4 @@
-import { Task } from "../Interfaces";
+import { Task } from "../../Interfaces";
 
 // setting up the interface for the props, with Task as the type
 interface Props {
