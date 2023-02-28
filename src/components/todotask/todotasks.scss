@@ -8,6 +8,10 @@
   color: #221f1b;
   font-family: 'Ubuntu', sans-serif;
 
+  .crossed-out {
+    text-decoration: line-through;
+  }
+
   h1{
     font-family: 'Pacifico', cursive;
     letter-spacing: 1.5px;
@@ -27,11 +31,34 @@
     align-items: center;
     margin-top: 10px;
 
+
+    .checkbox-bottom{
+      display: flex;
+      align-items: flex-end;
+      font-size: 1.2rem;
+      font-weight: 200;
+      letter-spacing: 0.5px;
+
+      .task-done input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+        border: 1px solid #B8C0FF;
+        border-radius: 4px;
+
+      }
+      .task-done:checked {
+        background-color: #B8C0FF !important;
+      }
+
+    }
+
     .trash-icon{
       color: #B8C0FF;
       font-size: 1.3rem;
       cursor: pointer;
       transition: all 0.3s ease-in-out;
+      margin-left: 15px;
 
       &:hover{
         transform: scale(1.2);
