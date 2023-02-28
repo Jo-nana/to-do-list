@@ -1,0 +1,22 @@
+.btn-primary{
+  font-family: 'Ubuntu', sans-serif;
+  background-color: #B8C0FF;
+  border: none;
+  color: #fffffc;
+  border-radius: 35px;
+  padding: 10px 20px;
+  font-size: 18px;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border: 2px solid #B8C0FF;
+
+  &:hover{
+    background-color: #fffffc;
+    border: 2px solid #B8C0FF;
+    color: #B8C0FF;
+  }
+  &:focus{
+    outline: 1px solid #B8C0FF;
+  }
+}

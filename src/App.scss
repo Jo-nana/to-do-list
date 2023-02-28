@@ -3,9 +3,11 @@
 
 
 .header{
-  font-family: 'Pacifico', cursive;
-  font-size: 2rem;
-  color: #fff;
+  h1{
+    font-family: 'Pacifico', cursive;
+    font-size: 2rem;
+    color: #fffffc;
+  }
   text-align: center;
   padding: 1rem;
   background-color: #B8C0FF;
@@ -13,4 +15,6 @@
 
 body {
   margin: 0;
+  font-family: 'Ubuntu', sans-serif;
+  background-color: #fffffc;
 }
