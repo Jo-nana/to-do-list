@@ -97,3 +97,14 @@ h4{
   margin-bottom: 5px;
   color: #221f1b;
 }
+
+
+.add-button{
+  font-size: 3rem;
+  color: #fffffc;
+  cursor: pointer;
+
+  &:hover{
+    opacity: 0.8;
+  }
+}

@@ -1,8 +1,10 @@
 import { FC, ChangeEvent, useState } from 'react';
-import './App.scss';
 import TodoTasks from './components/todotask/todotasks';
-import { Task } from './Interfaces'
 import Form from './components/form/form'
+import { Task } from './Interfaces'
+
+import { ReactComponent as TodoIllustration} from '../src/images/todo-illustration.svg'
+import './App.scss';
 
 const App: FC = () => {
   // state variables
@@ -44,10 +46,21 @@ const App: FC = () => {
       <h1>Todo</h1>
       <Form task={task} handleChange={handleChange} deadLine={deadLine} addTask={addTask} taskDescription={taskDescription}/>
     </header>
-    <div className="list">
-      {todoList.map((task: Task, key: number)=> {
-        return <TodoTasks key={key} task={task} completeTask={completeTask}/>;
-      })}
+    <div className="grid-container">
+      <div className="grid-item">
+        <TodoIllustration className="image" />
+      </div>
+      <div className="grid-item">
+        <div className="task-grid-container">
+          {todoList.map((task: Task, key: number)=> {
+            return(
+            <div className="task-grid-item">
+              <TodoTasks key={key} task={task} completeTask={completeTask}/>
+            </div>
+            )
+          })}
+        </div>
+      </div>
     </div>
   </div>
   );

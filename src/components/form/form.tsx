@@ -22,7 +22,7 @@ const toggleModal = (): void => {
 
 return(
   <Fragment>
-    <div onClick={toggleModal}>
+    <div className='add-button' onClick={toggleModal}>
       <i className="fa-solid fa-circle-plus"></i>
     </div>
 
